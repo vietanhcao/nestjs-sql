@@ -14,6 +14,9 @@ class Post {
   @Column()
   public content: string;
 
+  @Column({nullable: true})
+  public addedColumn: string;
+
   @ManyToMany(() => Category)
   @JoinTable()
   public categories: Category[];
